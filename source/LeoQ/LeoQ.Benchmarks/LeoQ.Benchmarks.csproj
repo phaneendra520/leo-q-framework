@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LEOQ.Core\LeoQ.Core.csproj" />
+    <ProjectReference Include="..\LeoQ.Sim\LeoQ.Sim.csproj" />
+  </ItemGroup>
+
 </Project>

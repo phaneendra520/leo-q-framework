@@ -1,0 +1,1 @@
+--scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --out results/day2.csv
