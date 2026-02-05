@@ -1,1 +1,11 @@
-<Solution />
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="LeoQ.Benchmarks/LeoQ.Benchmarks.csproj" />
+  <Project Path="LEOQ.Core/LeoQ.Core.csproj" />
+  <Project Path="LeoQ.Pqc/LeoQ.Pqc.csproj" />
+  <Project Path="LeoQ.Risk/LeoQ.Risk.csproj" />
+  <Project Path="LeoQ.Sim/LeoQ.Sim.csproj" />
+  <Project Path="Tests/LeoQTests.csproj" />
+</Solution>
