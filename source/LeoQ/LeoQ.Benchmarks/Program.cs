@@ -1,7 +1,8 @@
-using System.Globalization;
-using LeoQ.Core.Models;
 using LeoQ.Core.Abstractions;
+using LeoQ.Core.Models;
+using LeoQ.Core.Stats;
 using LeoQ.Sim.Models;
+using System.Globalization;
 
 static class Program
 {
@@ -13,6 +14,8 @@ static class Program
         double distanceKm = GetDouble(parsed, "--distanceKm", 5500);
         int hops = GetInt(parsed, "--hops", 14);
         int seed = GetInt(parsed, "--seed", 42);
+        int runs = GetInt(parsed, "--runs", 50);
+
         string outPath = Get(parsed, "--out", "results/day2_results.csv");
 
         var scenario = new ScenarioConfig(scenarioName, distanceKm, hops, seed);
@@ -25,33 +28,56 @@ static class Program
 
         Directory.CreateDirectory(Path.GetDirectoryName(outPath) ?? ".");
 
-        var results = models.Select(m => m.Run(scenario)).ToList();
+        var aggregateResults = new List<AggregateResult>();
 
-        foreach (var r in results)
-            Console.WriteLine($"{r.ModelName} latency_ms={r.LatencyMs:F3}");
+        foreach (var model in models)
+        {
+            var latencies = new List<double>();
 
-        WriteCsv(outPath, results);
+            for (int i = 0; i < runs; i++)
+            {
+                var runScenario = scenario with { Seed = scenario.Seed + i };
+                var result = model.Run(runScenario);
+                latencies.Add(result.LatencyMs);
+            }
+
+            aggregateResults.Add(new AggregateResult(
+                ModelName: model.Name,
+                ScenarioName: scenario.ScenarioName,
+                Runs: runs,
+                DistanceKm: scenario.DistanceKm,
+                HopCount: scenario.HopCount,
+                P50LatencyMs: LatencyStats.Percentile(latencies, 50),
+                P95LatencyMs: LatencyStats.Percentile(latencies, 95)
+            ));
+        }
+
+
+        WriteCsv(outPath, aggregateResults);
+
         Console.WriteLine($"Wrote: {outPath}");
         return 0;
     }
 
-    static void WriteCsv(string path, List<RunResult> rows)
+    static void WriteCsv(string path, List<AggregateResult> rows)
     {
         using var sw = new StreamWriter(path, false);
-        sw.WriteLine("model,scenario,seed,distance_km,hop_count,latency_ms");
+        sw.WriteLine("model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms");
 
         foreach (var r in rows)
         {
             sw.WriteLine(string.Join(",",
                 r.ModelName,
                 r.ScenarioName,
-                r.Seed,
+                r.Runs,
                 r.DistanceKm.ToString(CultureInfo.InvariantCulture),
                 r.HopCount,
-                r.LatencyMs.ToString("F6", CultureInfo.InvariantCulture)
+                r.P50LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+                r.P95LatencyMs.ToString("F6", CultureInfo.InvariantCulture)
             ));
         }
     }
+
 
     static Dictionary<string, string> ParseArgs(string[] args)
     {
