@@ -1,6 +1,6 @@
 using LeoQ.Core.Abstractions;
 using LeoQ.Core.Models;
-using LeoQ.Sim.Random;
+using LeoQ.Core.Random;
 
 namespace LeoQ.Sim.Models;
 

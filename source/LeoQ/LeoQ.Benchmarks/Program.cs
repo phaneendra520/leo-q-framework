@@ -15,16 +15,17 @@ static class Program
         int hops = GetInt(parsed, "--hops", 14);
         int seed = GetInt(parsed, "--seed", 42);
         int runs = GetInt(parsed, "--runs", 50);
-
+        var handoverProbPercent = GetDouble(parsed, "--handoverProbPercent", 0.02);
         string outPath = Get(parsed, "--out", "results/day2_results.csv");
 
-        var scenario = new ScenarioConfig(scenarioName, distanceKm, hops, seed);
-
+        var scenario = new ScenarioConfig(scenarioName, distanceKm, hops, seed, HandoverProb: handoverProbPercent);
         ILatencyModel[] models = new ILatencyModel[]
         {
             new FiberBaselineModel(),
             new InternetBaselineModel(),
-            new LeoPathBaselineModel()
+            new LeoPathBaselineModel(),
+            new LeoQPolicyRouterModel()
+
 
         };
 

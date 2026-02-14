@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LEOQ.Core\LeoQ.Core.csproj" />
+    <ProjectReference Include="..\LeoQ.Pqc\LeoQ.Pqc.csproj" />
   </ItemGroup>
 
 </Project>

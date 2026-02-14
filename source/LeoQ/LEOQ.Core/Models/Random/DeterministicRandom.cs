@@ -1,4 +1,4 @@
-namespace LeoQ.Sim.Random;
+namespace LeoQ.Core.Random;
 
 public sealed class DeterministicRandom
 {
