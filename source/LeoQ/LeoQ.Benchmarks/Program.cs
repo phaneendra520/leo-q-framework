@@ -23,7 +23,9 @@ static class Program
         ILatencyModel[] models = new ILatencyModel[]
         {
             new FiberBaselineModel(),
-            new InternetBaselineModel()
+            new InternetBaselineModel(),
+            new LeoPathBaselineModel()
+
         };
 
         Directory.CreateDirectory(Path.GetDirectoryName(outPath) ?? ".");

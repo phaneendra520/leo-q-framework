@@ -1,2 +1,4 @@
 --scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --out results/day2.csv
---scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 50 --out results/day3.csv
+--scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 50 --out results/fiberbaseline.csv
+--scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 200 --out results/leobaseline.csv
+

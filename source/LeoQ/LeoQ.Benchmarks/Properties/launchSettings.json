@@ -2,7 +2,7 @@
   "profiles": {
     "LeoQ.Benchmarks": {
       "commandName": "Project",
-      "commandLineArgs": "--scenario \"DFW-NYC\" --distanceKm 2200 --hops 12 --seed 42 --runs 50 --out results/multirun.csv\r\n"
+      "commandLineArgs": "--scenario \"DFW-NYC\" --distanceKm 2200 --hops 12 --seed 42 --runs 200 --out results/leobaseline.csv\r\n"
     }
   }
 }

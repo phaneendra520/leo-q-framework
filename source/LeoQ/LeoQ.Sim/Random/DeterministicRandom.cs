@@ -4,7 +4,9 @@ public sealed class DeterministicRandom
 {
     private readonly System.Random _rng;
 
+
     public DeterministicRandom(int seed) => _rng = new System.Random(seed);
+    public double NextUniform() => _rng.NextDouble();
 
     public double NextGaussian(double mean, double stdDev)
     {
