@@ -11,7 +11,8 @@ namespace LeoQ.Core.Models
         double DistanceKm,
         int HopCount,
         double P50LatencyMs,
-        double P95LatencyMs
+        double P95LatencyMs,
+        double P99LatencyMs
     );
 
 }

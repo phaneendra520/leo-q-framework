@@ -51,7 +51,8 @@ static class Program
                 DistanceKm: scenario.DistanceKm,
                 HopCount: scenario.HopCount,
                 P50LatencyMs: LatencyStats.Percentile(latencies, 50),
-                P95LatencyMs: LatencyStats.Percentile(latencies, 95)
+                P95LatencyMs: LatencyStats.Percentile(latencies, 95),
+                P99LatencyMs: LatencyStats.Percentile(latencies, 99)
             ));
         }
 
@@ -65,7 +66,7 @@ static class Program
     static void WriteCsv(string path, List<AggregateResult> rows)
     {
         using var sw = new StreamWriter(path, false);
-        sw.WriteLine("model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms");
+        sw.WriteLine("model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms,p99_latency_ms");
 
         foreach (var r in rows)
         {
@@ -76,7 +77,8 @@ static class Program
                 r.DistanceKm.ToString(CultureInfo.InvariantCulture),
                 r.HopCount,
                 r.P50LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
-                r.P95LatencyMs.ToString("F6", CultureInfo.InvariantCulture)
+                r.P95LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+                r.P99LatencyMs.ToString("F6", CultureInfo.InvariantCulture)
             ));
         }
     }
