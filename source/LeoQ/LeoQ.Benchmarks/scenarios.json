@@ -1,0 +1,4 @@
+[
+  { "scenarioName": "DFW-NYC", "distanceKm": 2200, "hopCount": 12, "seed": 42, "runs": 2000, "handoverProb": 0.08 },
+  { "scenarioName": "CHI-NYC", "distanceKm": 1150, "hopCount": 10, "seed": 42, "runs": 2000, "handoverProb": 0.08 }
+]

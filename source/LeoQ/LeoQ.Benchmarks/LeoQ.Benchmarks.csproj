@@ -12,4 +12,10 @@
     <ProjectReference Include="..\LeoQ.Sim\LeoQ.Sim.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="scenarios.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

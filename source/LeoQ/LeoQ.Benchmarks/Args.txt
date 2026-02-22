@@ -2,5 +2,6 @@
 --scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 50 --out results/fiberbaseline.csv
 --scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 200 --out results/leobaseline.csv
 --scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 1000 --handoverProbPercent 0.08 --out results/PolicyrouterwithHandover.csv
-
-
+--scenario "Sweep" --distancesKm "500,1000,2200,5000,8000" --hops 12 --seed 42 --runs 2000 --handoverProb 0.08 --out results/sweep.csv
+--scenarioFile scenarios.json --out results/scenarios.csv
+--scenario "DFW-NYC" --distanceKm 2200 --hops 12 --seed 42 --runs 2000 --handoverProb 0.08 --lambdaSweep "0.5,1,2,3,5" --out results/policy_curve.csv

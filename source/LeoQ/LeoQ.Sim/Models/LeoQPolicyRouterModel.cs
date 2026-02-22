@@ -9,16 +9,34 @@ public sealed class LeoQPolicyRouterModel : ILatencyModel
     public string Name => "LEOQ.PolicyRouter";
 
     // Tuning weights (keep simple and explicit)
-    private const double LambdaHandoverRisk = 3.0; // weight on expected handover penalty
-    private const double MuCrypto = 1.0;           // weight on PQC overhead
-
     private const double LightSpeedKmPerMs = 300.0;
 
     private readonly ICryptoOverheadModel _crypto;
+    private readonly double _lambdaHandoverRisk;
+    private readonly double _muCrypto;
 
-    public LeoQPolicyRouterModel() : this(new SimplePqcOverheadModel()) { }
+    // Default constructor (keeps backward compatibility)
+    public LeoQPolicyRouterModel()
+        : this(new SimplePqcOverheadModel(), 3.0, 1.0)
+    {
+    }
 
-    public LeoQPolicyRouterModel(ICryptoOverheadModel crypto) => _crypto = crypto;
+    // Constructor with crypto only (keeps old usage working)
+    public LeoQPolicyRouterModel(ICryptoOverheadModel crypto)
+        : this(crypto, 3.0, 1.0)
+    {
+    }
+
+    // Full constructor (used for lambda sweep / sensitivity analysis)
+    public LeoQPolicyRouterModel(
+        ICryptoOverheadModel crypto,
+        double lambdaHandoverRisk,
+        double muCrypto)
+    {
+        _crypto = crypto;
+        _lambdaHandoverRisk = lambdaHandoverRisk;
+        _muCrypto = muCrypto;
+    }
 
     public RunResult Run(ScenarioConfig s)
     {
@@ -32,7 +50,7 @@ public sealed class LeoQPolicyRouterModel : ILatencyModel
         var stable = s with
         {
             LeoIslHopCount = s.LeoIslHopCount + 3,
-            HandoverProb = Math.Max(0.01, s.HandoverProb * 0.3)
+            HandoverProb = Math.Max(0.005, s.HandoverProb * 0.15)
         };
 
 
@@ -53,11 +71,11 @@ public sealed class LeoQPolicyRouterModel : ILatencyModel
     {
         // Use expected latency (no random handover) + expected handover penalty + expected crypto overhead
         double expectedLeo = ExpectedLeoLatencyMs(c);
-        double expectedHandover = LambdaHandoverRisk * (c.HandoverProb * c.HandoverPenaltyMs);
+        double expectedHandover = _lambdaHandoverRisk * (c.HandoverProb * c.HandoverPenaltyMs);
 
         // Expected crypto overhead approximated by weighted average:
         double expectedCrypto = (!c.PqcEnabled) ? 0.0
-            : MuCrypto * (c.SessionResumptionProb * c.PqcResumptionMs + (1.0 - c.SessionResumptionProb) * c.PqcHandshakeMs);
+            : _muCrypto * (c.SessionResumptionProb * c.PqcResumptionMs + (1.0 - c.SessionResumptionProb) * c.PqcHandshakeMs);
 
         return expectedLeo + expectedHandover + expectedCrypto;
     }

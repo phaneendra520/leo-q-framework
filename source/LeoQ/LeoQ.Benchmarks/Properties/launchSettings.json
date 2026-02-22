@@ -2,7 +2,7 @@
   "profiles": {
     "LeoQ.Benchmarks": {
       "commandName": "Project",
-      "commandLineArgs": "--scenario \"DFW-NYC\" --distanceKm 2200 --hops 12 --seed 42 --runs 1000 --handoverProbPercent 0.08 --out results/PolicyrouterwithHandover.csv"
+      "commandLineArgs": "--scenario \"DFW-NYC\" --distanceKm 2200 --hops 12 --seed 42 --runs 2000 --handoverProb 0.08 --lambdaSweep \"0.5,1,2,3,5\" --out results/policy_curve.csv"
     }
   }
 }
