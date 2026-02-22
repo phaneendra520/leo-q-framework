@@ -50,6 +50,9 @@ static class Program
         int hops = GetInt(parsed, "--hops", 12);
         int seed = GetInt(parsed, "--seed", 42);
         int runs = GetInt(parsed, "--runs", 2000);
+        double decisionSlaMs = GetDouble(parsed, "--decisionSlaMs", 30.0);
+        double breachPenaltyAlpha = GetDouble(parsed, "--breachPenaltyAlpha", 0.0);
+
         double handoverProb = GetDouble(parsed, "--handoverProb", 0.02);
 
         // Optional sweeps
@@ -91,7 +94,7 @@ static class Program
             // Run baselines
             foreach (var model in baselineModels)
             {
-                rows.Add(RunAggregate(job, model, model.Name));
+                rows.Add(RunAggregate(job, model, model.Name, decisionSlaMs, breachPenaltyAlpha));
             }
 
             // Run LEOQ policy router(s)
@@ -102,13 +105,13 @@ static class Program
                     // NOTE: adjust this constructor signature if yours differs.
                     // Recommended signature: LeoQPolicyRouterModel(ICryptoOverheadModel crypto, double lambdaHandoverRisk = 3.0, double muCrypto = 1.0)
                     var policy = new LeoQPolicyRouterModel(pqc, lambdaHandoverRisk: lambda, muCrypto: 1.0);
-                    rows.Add(RunAggregate(job, policy, $"LEOQ.PolicyRouter.lambda={lambda.ToString(CultureInfo.InvariantCulture)}"));
+                    rows.Add(RunAggregate(job, policy, $"LEOQ.PolicyRouter.lambda={lambda.ToString(CultureInfo.InvariantCulture)}", decisionSlaMs, breachPenaltyAlpha));
                 }
             }
             else
             {
                 var policy = new LeoQPolicyRouterModel(pqc, lambdaHandoverRisk: 3.0, muCrypto: 1.0);
-                rows.Add(RunAggregate(job, policy, policy.Name));
+                rows.Add(RunAggregate(job, policy, policy.Name, decisionSlaMs, breachPenaltyAlpha));
             }
         }
 
@@ -128,19 +131,33 @@ static class Program
     // (kept local to avoid forcing Core edits if you haven’t yet)
     // -----------------------------
     public sealed record AggregateResultEx(
-        string ModelName,
-        string ScenarioName,
-        int Runs,
-        double DistanceKm,
-        int HopCount,
-        double P50LatencyMs,
-        double P95LatencyMs,
-        double P99LatencyMs
-    );
+    string ModelName,
+    string ScenarioName,
+    int Runs,
+    double DistanceKm,
+    int HopCount,
+    double P50LatencyMs,
+    double P95LatencyMs,
+    double P99LatencyMs,
+    double Cvar99LatencyMs,
+    double SlaBreachRate,
+    double P50DecisionLatencyMs,
+    double P95DecisionLatencyMs,
+    double P99DecisionLatencyMs,
+    double Cvar99DecisionLatencyMs
+);
 
-    private static AggregateResultEx RunAggregate(ScenarioJob job, ILatencyModel model, string modelNameOverride)
+    private static AggregateResultEx RunAggregate(
+     ScenarioJob job,
+     ILatencyModel model,
+     string modelNameOverride,
+     double decisionSlaMs,
+     double breachPenaltyAlpha)
     {
         var latencies = new List<double>(capacity: job.Runs);
+        var decisionLatencies = new List<double>(capacity: job.Runs);
+
+        int breaches = 0;
 
         for (int i = 0; i < job.Runs; i++)
         {
@@ -163,8 +180,31 @@ static class Program
             );
 
             var r = model.Run(scenario);
-            latencies.Add(r.LatencyMs);
+            double L = r.LatencyMs;
+            latencies.Add(L);
+
+            if (L > decisionSlaMs) breaches++;
+
+            // Finance-style “decision latency”: penalize lateness above SLA
+            // alpha=0 => decisionLatency == latency (still fine)
+            double penalty = breachPenaltyAlpha * Math.Max(0.0, L - decisionSlaMs);
+            double decisionLatency = L + penalty;
+            decisionLatencies.Add(decisionLatency);
         }
+
+        // Network metrics
+        double p50 = LatencyStats.Percentile(latencies, 50);
+        double p95 = LatencyStats.Percentile(latencies, 95);
+        double p99 = LatencyStats.Percentile(latencies, 99);
+        double cvar99 = Cvar(latencies, 0.99);
+
+        // Decision metrics
+        double dp50 = LatencyStats.Percentile(decisionLatencies, 50);
+        double dp95 = LatencyStats.Percentile(decisionLatencies, 95);
+        double dp99 = LatencyStats.Percentile(decisionLatencies, 99);
+        double dcvar99 = Cvar(decisionLatencies, 0.99);
+
+        double breachRate = (job.Runs <= 0) ? 0.0 : (double)breaches / job.Runs;
 
         return new AggregateResultEx(
             ModelName: modelNameOverride,
@@ -172,29 +212,70 @@ static class Program
             Runs: job.Runs,
             DistanceKm: job.DistanceKm,
             HopCount: job.HopCount,
-            P50LatencyMs: LatencyStats.Percentile(latencies, 50),
-            P95LatencyMs: LatencyStats.Percentile(latencies, 95),
-            P99LatencyMs: LatencyStats.Percentile(latencies, 99)
+            P50LatencyMs: p50,
+            P95LatencyMs: p95,
+            P99LatencyMs: p99,
+            Cvar99LatencyMs: cvar99,
+            SlaBreachRate: breachRate,
+            P50DecisionLatencyMs: dp50,
+            P95DecisionLatencyMs: dp95,
+            P99DecisionLatencyMs: dp99,
+            Cvar99DecisionLatencyMs: dcvar99
         );
+    }
+
+
+    private static double Cvar(List<double> values, double alpha)
+    {
+        if (values == null || values.Count == 0)
+            throw new ArgumentException("Values must not be empty");
+
+        if (alpha <= 0.0 || alpha >= 1.0)
+            throw new ArgumentException("alpha must be in (0,1)");
+
+        var sorted = values.OrderBy(v => v).ToArray();
+        int n = sorted.Length;
+
+        // CVaR_alpha = average of worst (1-alpha) tail
+        int startIndex = (int)Math.Ceiling(alpha * n);
+        if (startIndex >= n) startIndex = n - 1;
+
+        double sum = 0.0;
+        int count = 0;
+
+        for (int i = startIndex; i < n; i++)
+        {
+            sum += sorted[i];
+            count++;
+        }
+
+        return sum / Math.Max(1, count);
     }
 
     private static void WriteCsv(string path, List<AggregateResultEx> rows)
     {
         using var sw = new StreamWriter(path, false);
-        sw.WriteLine("model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms,p99_latency_ms");
-
+        sw.WriteLine("model,scenario,runs,distance_km,hop_count," +
+             "p50_latency_ms,p95_latency_ms,p99_latency_ms,cvar99_latency_ms,sla_breach_rate," +
+             "p50_decision_latency_ms,p95_decision_latency_ms,p99_decision_latency_ms,cvar99_decision_latency_ms");
         foreach (var r in rows)
         {
             sw.WriteLine(string.Join(",",
-                Escape(r.ModelName),
-                Escape(r.ScenarioName),
-                r.Runs.ToString(CultureInfo.InvariantCulture),
-                r.DistanceKm.ToString(CultureInfo.InvariantCulture),
-                r.HopCount.ToString(CultureInfo.InvariantCulture),
-                r.P50LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
-                r.P95LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
-                r.P99LatencyMs.ToString("F6", CultureInfo.InvariantCulture)
-            ));
+     Escape(r.ModelName),
+     Escape(r.ScenarioName),
+     r.Runs.ToString(CultureInfo.InvariantCulture),
+     r.DistanceKm.ToString(CultureInfo.InvariantCulture),
+     r.HopCount.ToString(CultureInfo.InvariantCulture),
+     r.P50LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.P95LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.P99LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.Cvar99LatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.SlaBreachRate.ToString("F6", CultureInfo.InvariantCulture),
+     r.P50DecisionLatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.P95DecisionLatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.P99DecisionLatencyMs.ToString("F6", CultureInfo.InvariantCulture),
+     r.Cvar99DecisionLatencyMs.ToString("F6", CultureInfo.InvariantCulture)
+ ));
         }
     }
 

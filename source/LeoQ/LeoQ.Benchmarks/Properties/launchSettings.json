@@ -2,7 +2,7 @@
   "profiles": {
     "LeoQ.Benchmarks": {
       "commandName": "Project",
-      "commandLineArgs": "--scenario \"DFW-NYC\" --distanceKm 2200 --hops 12 --seed 42 --runs 2000 --handoverProb 0.08 --lambdaSweep \"0.5,1,2,3,5\" --out results/policy_curve.csv"
+      "commandLineArgs": "--distancesKm \"5000,8000\" --runs 3000 --handoverProb 0.12 \\\r\n--decisionSlaMs 35 --breachPenaltyAlpha 2.0 \\\r\n--lambdaSweep \"1,2,3,5,8\" \\\r\n--out results/stress_curve.csv"
     }
   }
 }
