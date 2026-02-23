@@ -14,3 +14,9 @@
 
 # Logs
 *.log
+
+# Local IDE
+.vscode/
+
+# Docs artifacts
+docs/architecture/*.png

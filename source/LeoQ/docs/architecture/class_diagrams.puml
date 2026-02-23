@@ -1,0 +1,36 @@
+@startuml
+!theme plain
+
+class ScenarioConfig {
+  +ScenarioName : string
+  +DistanceKm : double
+  +HopCount : int
+  +Seed : int
+  +PqcEnabled : bool
+}
+
+class LeoPathGeometry
+class AggregateResult
+class LatencyStats
+interface ILatencyModel
+interface ICryptoOverheadModel
+class DeterministicRandom
+
+class LeoQPolicyRouterModel
+class InternetBaselineModel
+class LeoPathBaselineModel
+class SimplePqcOverheadModel
+class Program
+
+LeoQPolicyRouterModel --> LeoPathGeometry
+InternetBaselineModel --> ScenarioConfig
+LeoPathBaselineModel --> ScenarioConfig
+LeoQPolicyRouterModel --> ILatencyModel
+InternetBaselineModel --> ILatencyModel
+SimplePqcOverheadModel ..|> ICryptoOverheadModel
+LatencyStats <-- AggregateResult
+DeterministicRandom --> ScenarioConfig
+Program --> LeoQPolicyRouterModel
+Program --> InternetBaselineModel
+
+@enduml
