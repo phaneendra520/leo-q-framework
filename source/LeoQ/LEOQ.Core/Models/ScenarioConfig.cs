@@ -17,6 +17,12 @@ public sealed record ScenarioConfig(
     bool PqcEnabled = true,
     double PqcHandshakeMs = 4.0,         // worst-case handshake overhead
     double PqcResumptionMs = 0.8,        // session resumption overhead
-    double SessionResumptionProb = 0.85  // probability resumption works
+    double SessionResumptionProb = 0.85,  // probability resumption works
+    // --- Decision objective (finance) ---
+double DecisionSlaMs = 30.0,          // deadline threshold for "decision stability"
+double BreachPenaltyAlpha = 0.0,      // decision penalty alpha (0 => decisionLatency==latency)
 
+// --- Tail-realistic handover spikes (best-case but defensible) ---
+double HandoverSpikeConditionalProb = 0.15, // P(spike | handover)
+double HandoverSpikePenaltyMs = 40.0        // extra spike latency added if spike triggers
 );

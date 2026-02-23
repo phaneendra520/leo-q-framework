@@ -39,8 +39,17 @@ namespace LeoQ.Sim.Models
             // Simpler: derive a pseudo-uniform from Gaussian CDF-ish via clamp.
             double g = dr.NextGaussian(0, 1);
             double pseudoUniform = Math.Max(0.0, Math.Min(1.0, 0.5 + (g / 6.0))); // roughly [0,1]
-            double handoverMs = (dr.NextUniform() < s.HandoverProb) ? s.HandoverPenaltyMs
-       : 0.0;
+            double handoverMs = 0.0;
+
+            if (dr.NextUniform() < s.HandoverProb)
+            {
+                // Base handover penalty
+                handoverMs += s.HandoverPenaltyMs;
+
+                // Rare-but-large spike conditional on handover
+                if (dr.NextUniform() < s.HandoverSpikeConditionalProb)
+                    handoverMs += s.HandoverSpikePenaltyMs;
+            }
             double latency = propagationMs + groundProcMs + islOverheadMs + handoverMs;
 
             return new RunResult(Name, s.ScenarioName, s.Seed, s.DistanceKm, s.HopCount, latency);

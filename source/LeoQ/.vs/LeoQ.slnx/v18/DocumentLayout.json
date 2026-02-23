@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\scenarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\scenarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.benchmarks\\leoq.benchmarks.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\leoq.benchmarks.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -11,48 +15,40 @@
       "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\leoq.benchmarks.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.benchmarks\\args.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\args.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.benchmarks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.benchmarks\\scenarios.json||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\scenarios.json||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\aggregateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\aggregateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.sim\\models\\leoqpolicyroutermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|solutionrelative:leoq.sim\\models\\leoqpolicyroutermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\abstractions\\icryptooverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\abstractions\\icryptooverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.sim\\models\\leopathbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|solutionrelative:leoq.sim\\models\\leopathbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\scenarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\scenarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\aggregateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\aggregateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\random\\deterministicrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\random\\deterministicrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.benchmarks\\args.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1D98FB03-0EFA-8762-81C5-496F6BEE2E53}|LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj|solutionrelative:leoq.benchmarks\\args.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.sim\\models\\internetbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|solutionrelative:leoq.sim\\models\\internetbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.sim\\models\\leopathbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|solutionrelative:leoq.sim\\models\\leopathbaselinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC4330DF-8A5A-F999-2239-F2BC0C532DE6}|LeoQ.Pqc\\LeoQ.Pqc.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.pqc\\models\\simplepqcoverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC4330DF-8A5A-F999-2239-F2BC0C532DE6}|LeoQ.Pqc\\LeoQ.Pqc.csproj|solutionrelative:leoq.pqc\\models\\simplepqcoverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\models\\random\\deterministicrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\models\\random\\deterministicrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9725FDED-B5DE-2D6C-4561-5ABDD218229F}|LeoQ.Sim\\LeoQ.Sim.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.sim\\leoq.sim.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -61,6 +57,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC4330DF-8A5A-F999-2239-F2BC0C532DE6}|LeoQ.Pqc\\LeoQ.Pqc.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.pqc\\leoq.pqc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{AC4330DF-8A5A-F999-2239-F2BC0C532DE6}|LeoQ.Pqc\\LeoQ.Pqc.csproj|solutionrelative:leoq.pqc\\leoq.pqc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\abstractions\\icryptooverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|solutionrelative:leoq.core\\abstractions\\icryptooverheadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED756E58-679D-F98A-A935-2F3315D30CFA}|LEOQ.Core\\LeoQ.Core.csproj|c:\\users\\phane\\source\\repos\\leo-q-framework\\source\\leoq\\leoq.core\\stats\\latencystats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,6 +93,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\architecture\\architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.puml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\architecture\\architecture.puml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\architecture\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,50 +114,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "scenarios.json",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\scenarios.json",
-              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\scenarios.json",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\scenarios.json",
-              "RelativeToolTip": "LeoQ.Benchmarks\\scenarios.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-22T21:56:52.257Z",
+              "DocumentIndex": 25,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\README.md",
+              "RelativeDocumentMoniker": "docs\\architecture\\README.md",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\README.md",
+              "RelativeToolTip": "docs\\architecture\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-23T01:00:21.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Program.cs",
-              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\Program.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Program.cs",
-              "RelativeToolTip": "LeoQ.Benchmarks\\Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAADgv2oAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "architecture.puml",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.puml",
+              "RelativeDocumentMoniker": "docs\\architecture\\architecture.puml",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.puml",
+              "RelativeToolTip": "docs\\architecture\\architecture.puml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-23T01:00:18.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "architecture.md",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.md",
+              "RelativeDocumentMoniker": "docs\\architecture\\architecture.md",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\docs\\architecture\\architecture.md",
+              "RelativeToolTip": "docs\\architecture\\architecture.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-23T01:00:15.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScenarioConfig.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\ScenarioConfig.cs",
+              "RelativeDocumentMoniker": "LEOQ.Core\\Models\\ScenarioConfig.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\ScenarioConfig.cs",
+              "RelativeToolTip": "LEOQ.Core\\Models\\ScenarioConfig.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswBMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T05:05:30.117Z",
+              "WhenOpened": "2026-02-14T04:56:52.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LeoQPolicyRouterModel.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
-              "RelativeDocumentMoniker": "LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
-              "RelativeToolTip": "LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAswF0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T05:49:48.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LeoQ.Benchmarks.csproj",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj",
               "RelativeDocumentMoniker": "LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj",
@@ -158,20 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Args.txt",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Args.txt",
-              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\Args.txt",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Args.txt",
-              "RelativeToolTip": "LeoQ.Benchmarks\\Args.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-02-05T04:36:15.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LeoQ.Benchmarks",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj",
               "RelativeDocumentMoniker": "LeoQ.Benchmarks\\LeoQ.Benchmarks.csproj",
@@ -184,58 +196,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "LeoPathBaselineModel.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
+              "RelativeDocumentMoniker": "LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
+              "RelativeToolTip": "LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwDMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T05:03:37.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeoQPolicyRouterModel.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
+              "RelativeDocumentMoniker": "LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
+              "RelativeToolTip": "LeoQ.Sim\\Models\\LeoQPolicyRouterModel.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAcwHEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T05:49:48.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Program.cs",
+              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\Program.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Program.cs",
+              "RelativeToolTip": "LeoQ.Benchmarks\\Program.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAswLYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T05:05:30.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AggregateResult.cs",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\AggregateResult.cs",
               "RelativeDocumentMoniker": "LEOQ.Core\\Models\\AggregateResult.cs",
               "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\AggregateResult.cs",
               "RelativeToolTip": "LEOQ.Core\\Models\\AggregateResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-10T04:19:45.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DeterministicRandom.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
-              "RelativeDocumentMoniker": "LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
-              "RelativeToolTip": "LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T05:58:22.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ICryptoOverheadModel.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
-              "RelativeDocumentMoniker": "LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
-              "RelativeToolTip": "LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T05:45:58.409Z",
+              "Title": "run_manifest.json",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json",
+              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json",
+              "RelativeToolTip": "LeoQ.Benchmarks\\bin\\Debug\\net10.0\\results\\run_manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-22T22:04:09.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ScenarioConfig.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\ScenarioConfig.cs",
-              "RelativeDocumentMoniker": "LEOQ.Core\\Models\\ScenarioConfig.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\ScenarioConfig.cs",
-              "RelativeToolTip": "LEOQ.Core\\Models\\ScenarioConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T04:56:52.128Z",
+              "Title": "Args.txt",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Args.txt",
+              "RelativeDocumentMoniker": "LeoQ.Benchmarks\\Args.txt",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Benchmarks\\Args.txt",
+              "RelativeToolTip": "LeoQ.Benchmarks\\Args.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-05T04:36:15.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "LeoQ.Sim.csproj",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\LeoQ.Sim.csproj",
               "RelativeDocumentMoniker": "LeoQ.Sim\\LeoQ.Sim.csproj",
@@ -247,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "LeoQ.Pqc.csproj",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Pqc\\LeoQ.Pqc.csproj",
               "RelativeDocumentMoniker": "LeoQ.Pqc\\LeoQ.Pqc.csproj",
@@ -259,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "SimplePqcOverheadModel.cs",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Pqc\\Models\\SimplePqcOverheadModel.cs",
               "RelativeDocumentMoniker": "LeoQ.Pqc\\Models\\SimplePqcOverheadModel.cs",
@@ -271,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "InternetBaselineModel.cs",
               "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\InternetBaselineModel.cs",
               "RelativeDocumentMoniker": "LeoQ.Sim\\Models\\InternetBaselineModel.cs",
@@ -284,14 +322,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "LeoPathBaselineModel.cs",
-              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
-              "RelativeDocumentMoniker": "LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
-              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
-              "RelativeToolTip": "LeoQ.Sim\\Models\\LeoPathBaselineModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "DeterministicRandom.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
+              "RelativeDocumentMoniker": "LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
+              "RelativeToolTip": "LEOQ.Core\\Models\\Random\\DeterministicRandom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T05:03:37.065Z"
+              "WhenOpened": "2026-02-14T05:58:22.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ICryptoOverheadModel.cs",
+              "DocumentMoniker": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
+              "RelativeDocumentMoniker": "LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
+              "ToolTip": "C:\\Users\\phane\\source\\repos\\leo-q-framework\\source\\LeoQ\\LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
+              "RelativeToolTip": "LEOQ.Core\\Abstractions\\ICryptoOverheadModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T05:45:58.409Z"
             },
             {
               "$type": "Document",

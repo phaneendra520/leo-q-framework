@@ -10,7 +10,9 @@ public sealed class LeoQPolicyRouterModel : ILatencyModel
 
     // Tuning weights (keep simple and explicit)
     private const double LightSpeedKmPerMs = 300.0;
-
+    private const int PolicyEvalSamples = 64;        // small internal sample per candidate
+    private const double RiskWeight = 150.0;         // scales tail risk vs mean (tune if needed)
+    private const double CvarAlpha = 0.99;           // tail metric inside policy
     private readonly ICryptoOverheadModel _crypto;
     private readonly double _lambdaHandoverRisk;
     private readonly double _muCrypto;
@@ -54,17 +56,61 @@ public sealed class LeoQPolicyRouterModel : ILatencyModel
         };
 
 
-        // Score both candidates
-        double fastScore = ScoreCandidate(fast);
-        double stableScore = ScoreCandidate(stable);
+        double fastScore = ScoreCandidateTailAware(fast);
+        double stableScore = ScoreCandidateTailAware(stable);
 
-        // Choose best candidate (policy decision)
         var chosen = (stableScore <= fastScore) ? stable : fast;
 
         // Now “execute” latency sample using the same LEO path logic + crypto overhead
         double latency = SampleLeoLatencyMs(chosen) + _crypto.SampleCryptoOverheadMs(chosen);
 
         return new RunResult(Name, chosen.ScenarioName, chosen.Seed, chosen.DistanceKm, chosen.HopCount, latency);
+    }
+
+    private double ScoreCandidateTailAware(ScenarioConfig c)
+    {
+        // Internal quick sampling to estimate tail risk & SLA breach probability
+        // This is your "controller" behavior: choose stability when risk increases.
+        var samples = new List<double>(PolicyEvalSamples);
+        int breaches = 0;
+
+        for (int i = 0; i < PolicyEvalSamples; i++)
+        {
+            var ci = c with { Seed = c.Seed + 10_000 + i }; // deterministic offset
+            double L = SampleLeoLatencyMs(ci) + _crypto.SampleCryptoOverheadMs(ci);
+            samples.Add(L);
+
+            if (L > c.DecisionSlaMs) breaches++;
+        }
+
+        double mean = samples.Average();
+        double cvar = Cvar(samples, CvarAlpha);
+        double breachRate = (double)breaches / PolicyEvalSamples;
+
+        // Score: expected latency + weighted tail risk + weighted SLA breach risk
+        // Breach rate is multiplied to make it comparable in ms-units.
+        return mean + RiskWeight * cvar + (RiskWeight * 100.0) * breachRate;
+    }
+
+    private static double Cvar(List<double> values, double alpha)
+    {
+        if (values.Count == 0) return 0.0;
+        var sorted = values.OrderBy(v => v).ToArray();
+        int n = sorted.Length;
+
+        int startIndex = (int)Math.Ceiling(alpha * n);
+        if (startIndex >= n) startIndex = n - 1;
+
+        double sum = 0.0;
+        int count = 0;
+
+        for (int i = startIndex; i < n; i++)
+        {
+            sum += sorted[i];
+            count++;
+        }
+
+        return sum / Math.Max(1, count);
     }
 
     private double ScoreCandidate(ScenarioConfig c)

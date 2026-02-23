@@ -176,7 +176,9 @@ static class Program
                 PqcEnabled: job.PqcEnabled,
                 PqcHandshakeMs: job.PqcHandshakeMs,
                 PqcResumptionMs: job.PqcResumptionMs,
-                SessionResumptionProb: job.SessionResumptionProb
+                SessionResumptionProb: job.SessionResumptionProb,
+                DecisionSlaMs: decisionSlaMs,
+                BreachPenaltyAlpha: breachPenaltyAlpha
             );
 
             var r = model.Run(scenario);

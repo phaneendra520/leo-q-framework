@@ -1,0 +1,21 @@
+@startuml
+!theme plain
+
+package "Repository" {
+  [LEOQ.Core] as Core
+  [LeoQ.Sim] as Sim
+  [LeoQ.Pqc] as Pqc
+  [LeoQ.Benchmarks] as Bench
+  [LeoQ.Risk] as Risk
+  [Tests] as Tests
+}
+
+Bench --> Sim
+Bench --> Core
+Sim --> Core
+Sim --> Pqc
+Risk --> Core
+Tests --> Core
+Tests --> Sim
+
+@enduml

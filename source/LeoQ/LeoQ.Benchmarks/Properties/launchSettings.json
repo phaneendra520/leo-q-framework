@@ -2,7 +2,7 @@
   "profiles": {
     "LeoQ.Benchmarks": {
       "commandName": "Project",
-      "commandLineArgs": "--distancesKm \"5000,8000\" --runs 3000 --handoverProb 0.12 \\\r\n--decisionSlaMs 35 --breachPenaltyAlpha 2.0 \\\r\n--lambdaSweep \"1,2,3,5,8\" \\\r\n--out results/stress_curve.csv"
+      "commandLineArgs": "--distanceKm 8000 --runs 4000 --handoverProb 0.10 --decisionSlaMs 65 --breachPenaltyAlpha 0 \\\r\n--lambdaSweep \"1,2,3,5,8\" --out results/bestcase_8000.csv"
     }
   }
 }
