@@ -1,0 +1,9 @@
+model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms,p99_latency_ms
+"Baseline.Fiber","demo",2000,2200,12,12.800000,12.800000,12.800000
+"Baseline.Internet","demo",2000,2200,12,26.198716,28.643999,29.663521
+"Baseline.LEOPath","demo",2000,2200,12,21.366667,21.366667,29.366667
+"LEOQ.PolicyRouter","demo",2000,2200,12,21.366667,24.806667,29.366667
+"Baseline.Fiber","demo",2000,2200,12,12.800000,12.800000,12.800000
+"Baseline.Internet","demo",2000,2200,12,26.198716,28.643999,29.663521
+"Baseline.LEOPath","demo",2000,2200,12,21.366667,21.366667,29.366667
+"LEOQ.PolicyRouter","demo",2000,2200,12,21.366667,24.806667,29.366667

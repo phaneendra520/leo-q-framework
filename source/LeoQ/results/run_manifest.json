@@ -1,0 +1,45 @@
+{
+  "utcTimestamp": "2026-02-23T00:37:54.7280032Z",
+  "commandLine": [
+    "--distanceKm",
+    "8000",
+    "--runs",
+    "4000",
+    "--handoverProb",
+    "0.10",
+    "--decisionSlaMs",
+    "65",
+    "--breachPenaltyAlpha",
+    "0",
+    "\\",
+    "--lambdaSweep",
+    "1,2,3,5,8",
+    "--out",
+    "results/bestcase_8000.csv"
+  ],
+  "outputCsv": "results/bestcase_8000.csv",
+  "distancesKm": [],
+  "lambdaSweep": [
+    1,
+    2,
+    3,
+    5,
+    8
+  ],
+  "scenarios": [
+    {
+      "ScenarioName": "DFW-NYC",
+      "DistanceKm": 8000,
+      "HopCount": 12,
+      "Seed": 42,
+      "Runs": 4000,
+      "HandoverProb": 0.1,
+      "LeoAltitudeKm": 550,
+      "LeoIslHopCount": 4,
+      "PqcEnabled": true,
+      "PqcHandshakeMs": 4,
+      "PqcResumptionMs": 0.8,
+      "SessionResumptionProb": 0.85
+    }
+  ]
+}

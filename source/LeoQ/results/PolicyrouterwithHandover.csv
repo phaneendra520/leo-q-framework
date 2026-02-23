@@ -1,0 +1,5 @@
+model,scenario,runs,distance_km,hop_count,p50_latency_ms,p95_latency_ms,p99_latency_ms
+"Baseline.Fiber","DFW-NYC",1000,2200,12,12.800000,12.800000,12.800000
+"Baseline.Internet","DFW-NYC",1000,2200,12,26.197939,28.651055,29.716805
+"Baseline.LEOPath","DFW-NYC",1000,2200,12,21.366667,21.366667,29.366667
+"LEOQ.PolicyRouter","DFW-NYC",1000,2200,12,21.366667,24.806667,29.398667
