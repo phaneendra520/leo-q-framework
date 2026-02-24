@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1149359627.svg)](https://doi.org/10.5281/zenodo.18752218)
+
 # LEO-Q Framework
 
 LEO-Q is a research framework for evaluating latency-aware, quantum-secured
