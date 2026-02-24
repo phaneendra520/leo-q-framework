@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "LEO-Q: Tail-Risk-Aware Routing for Stability in Long-Haul LEO Networks"
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Yerra
+    given-names: Phaneendra
+version: 1.0.0
+doi: 10.5281/zenodo.18752218
+date-released: 2026-02-23
+url: https://doi.org/10.5281/zenodo.18752218
+repository-code: https://github.com/phaneendra520/leo-q-framework
+license: MIT
